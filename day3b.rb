@@ -1,0 +1,1 @@
+input = open("day3.txt").read.lines.map(&:split)
