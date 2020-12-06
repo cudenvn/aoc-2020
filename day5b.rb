@@ -1,4 +1,3 @@
-# Summation formula n*(n+1)/2
 input = open("day5.txt").read.split(/\s+/)
 
 seats = []
