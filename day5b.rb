@@ -1,7 +1,7 @@
+# Summation formula n*(n+1)/2
 input = open("day5.txt").read.split(/\s+/)
 
-answer = 0
-
+seats = []
 input.each do |pass|
   # Get the row number
   rows = [*0..127]
@@ -16,7 +16,7 @@ input.each do |pass|
   end
 
   seatId = rows.first.to_i * 8 + columns.first.to_i
-  answer = seatId if seatId > answer
+  seats << seatId
 end
 
-puts answer
+puts [*seats.min..seats.max].reduce(:+) - seats.reduce(:+)
