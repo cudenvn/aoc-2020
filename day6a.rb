@@ -1,1 +1,3 @@
-input = open("day6.txt").read.lines
+input = open("day6.txt").read.split("\n\n").map { |s| s.split(/\s+/) }
+
+puts input.reduce(0) { |sum, group| sum + group.join("").chars.uniq.size }
