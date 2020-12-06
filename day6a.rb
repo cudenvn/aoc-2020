@@ -1,0 +1,1 @@
+input = open("day6.txt").read.lines
