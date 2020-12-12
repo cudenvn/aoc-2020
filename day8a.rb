@@ -4,7 +4,7 @@ past_index = []
 current_index = 0
 acc = 0
 
-loop do
+until past_index.include?(current_index)
   opp = input[current_index].split(" ")
   past_index << current_index
 
@@ -16,8 +16,6 @@ loop do
   else
     current_index = (current_index + 1) % input.size
   end
-
-  break if past_index.include?(current_index)
 end
 
 p acc
