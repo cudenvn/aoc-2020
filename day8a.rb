@@ -10,11 +10,11 @@ until past_index.include?(current_index)
 
   if opp[0] == "acc"
     acc += opp[1].to_i
-    current_index = (current_index + 1) % input.size
+    current_index += 1
   elsif opp[0] == "jmp"
-    current_index = (current_index + opp[1].to_i) % input.size
+    current_index += opp[1].to_i
   else
-    current_index = (current_index + 1) % input.size
+    current_index += 1
   end
 end
 
